@@ -48,7 +48,6 @@ const UpdateAndDelete = () => {
     e.preventDefault(); // prevent form from reloading
 
     try {
-      const token = localStorage.getItem("token");
 
       const updatedMovie = {
         ...movie,
@@ -58,9 +57,7 @@ const UpdateAndDelete = () => {
           : movie.actors?.map((actor) => actor.name) || [],
       };
 
-      await axios.put(`https://backend-1h5d.onrender.com/api/updated/${id}`, updatedMovie, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.put(`https://backend-1h5d.onrender.com/api/updated/${id}`, updatedMovie);
 
       alert("Movie updated successfully!");
       navigate("/");
@@ -73,10 +70,7 @@ const UpdateAndDelete = () => {
   const handleDelete = async (e) => {
     e.preventDefault(); // prevent form from reloading
     try {
-      const token = localStorage.getItem("token");
-      await axios.delete(`https://backend-1h5d.onrender.com/api/delete/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(`https://backend-1h5d.onrender.com/api/delete/${id}`);
 
       alert("Movie deleted successfully!");
       navigate("/");
