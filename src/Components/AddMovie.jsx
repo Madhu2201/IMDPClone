@@ -26,16 +26,11 @@ const AddMovie = () => {
       e.preventDefault(); // prevent default form submission
       
       try {
-        const token = localStorage.getItem("token"); // or wherever you store it
     
         const response = await axios.post(
           "https://backend-1h5d.onrender.com/api/create",
           movie,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`, // ⬅️ Send JWT token here
-            },
-          }
+        
         );
     
         console.log("Movie added successfully:", response.data);

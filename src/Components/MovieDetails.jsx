@@ -58,12 +58,8 @@ const MovieDetails = () => {
 
     const handleDelete = async () => {
         try {
-            const token = localStorage.getItem("token");
-            await axios.delete(`https://backend-1h5d.onrender.com/api/delete/${id}`, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
+            await axios.delete(`https://backend-1h5d.onrender.com/api/delete/${id}`, 
+            );
             alert("Movie deleted successfully!");
             navigate("/");
         } catch (error) {
