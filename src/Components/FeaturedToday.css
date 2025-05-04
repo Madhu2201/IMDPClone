@@ -326,3 +326,34 @@ display: flex;
   display: flex;
   justify-content: center;
 }
+.featured-footer{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding:2rem ;
+    background-color: #111;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+.featured-footer h3 {
+    margin: 0;
+    font-size: 24px;
+    text-align: justify;
+  }
+  .featured-footer li {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .featured-footer h5,h6 {
+    margin: 10px 0;
+    text-align: justify;
+   padding:0 5vw;
+   width: 100%;  
+   height: 100%;
+  }
+  

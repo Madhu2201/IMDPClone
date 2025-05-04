@@ -1,85 +1,4 @@
-// // FeaturedToday.js
-// // import React from "react";
-// // import MovieCard from "../Components/MovieCard";
-// import PropTypes from "prop-types";
-// import MovieCard from "./MovieCard";
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import "./FeaturedToday.css"; // Import your CSS file for styling
-// const FeaturedToday = ({ movies }) => {
-  
-// // inside FeaturedToday component
-// const [currentIndex, setCurrentIndex] = useState(0);
-// const featuredMovies = [...movies].slice(-6, -1).reverse();
 
-// const handleNext = () => {
-//   setCurrentIndex((prev) => (prev + 1) % featuredMovies.length);
-// };
-
-// const handlePrev = () => {
-//   setCurrentIndex((prev) =>
-//     prev === 0 ? featuredMovies.length - 1 : prev - 1
-//   );
-// };
-//   const navigate = useNavigate();
-//   const handleClick = () => {
-//     // Handle the search button click event here
-//     navigate('/addmovie');
-//   };
-//   return (
-//     <div className="featured-container">
-     
-//       <div className="featured-header"> 
-//         <div>
-//         <h2>Featured Today</h2>
-//         </div>
-//         <div>
-//           <button onClick={handleClick}>Add Movies</button>
-//         </div>
-       
-      
-//         </div>
-
-//   {/* Scrollable list of recent 5 movies (excluding top one) */}
-//   <div className="featured-movie-scroll">
-//   <button className="arrow-btn left" onClick={handlePrev}>&#10094;</button>
-
-//   <div className="featured-slide">
-//     {movies.map((movie, index) => (
-//       <div
-//         key={movie.id}
-//         className={`featured-movie ${index === currentIndex ? "active" : ""}`}
-//       >
-//         <img src={movie.poster} alt={movie.name} />
-//         <h3>{movie.name}</h3>
-//         <p>{movie.plot}</p>
-//       </div>
-//     ))}
-//   </div>
-
-//   <button className="arrow-btn right" onClick={handleNext}>&#10095;</button>
-// </div>
-
-//     <div className="card-wrapper">
-//   {movies.map(movie => (
-//     <MovieCard key={movie.id} movie={movie} />
-//   ))}
-// </div>
-//   </div>
-//   );
-// };
-
-// FeaturedToday.propTypes = {
-//   movies: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       name: PropTypes.string.isRequired,
-//       poster: PropTypes.string.isRequired,
-//       plot: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
-
-// export default FeaturedToday;
 
 
 import PropTypes from "prop-types";
@@ -190,6 +109,24 @@ const FeaturedToday = ({ movies }) => {
         {filteredMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
+      </div>
+      <div className="featured-footer">
+        <div>
+          <ul>
+        <h2>Featured Movies</h2>
+        <li>Discover the latest and greatest in cinema.</li>
+        <li>Explore our curated selection of films that are making waves.</li>
+        <li>From blockbusters to indie gems, find your next favorite movie.</li>
+        <li>Join the conversation and share your thoughts on these films.</li>
+        <li>Stay tuned for more updates and recommendations!</li>
+        </ul>
+        </div>
+        <div>
+        <p>Happy watching!</p>
+        <p>IMDP Clone Team</p>
+        <p>2023</p>
+        <p>All rights reserved.</p>
+        </div>
       </div>
     </div>
   );

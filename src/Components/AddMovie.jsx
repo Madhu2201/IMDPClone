@@ -24,10 +24,22 @@ const AddMovie = () => {
     setMovie((prevMovie) => ({ ...prevMovie, [name]: value }));
   };    const handleSubmit = async (e) => {
       e.preventDefault(); // prevent default form submission
+      
       try {
-        const response = await axios.post("http://localhost:7000/api/create", movie);
+        const token = localStorage.getItem("token"); // or wherever you store it
+    
+        const response = await axios.post(
+          "https://backend-1h5d.onrender.com/api/create",
+          movie,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // ⬅️ Send JWT token here
+            },
+          }
+        );
+    
         console.log("Movie added successfully:", response.data);
-  
+    
         // Clear form after submission
         setMovie({
           name: "",
@@ -45,6 +57,7 @@ const AddMovie = () => {
       } catch (error) {
         console.error("Error adding movie:", error);
       }
+    
     };
 
   return (
