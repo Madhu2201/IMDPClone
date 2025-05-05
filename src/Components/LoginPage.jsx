@@ -18,9 +18,7 @@ const LoginPage = () => {
         { email, password }
       );
       const { Token } = response.data;
-
       localStorage.setItem("token", Token);
-
       naviagte("/home");
     } catch (error) {
       console.error("Error during login:", error.response.data);

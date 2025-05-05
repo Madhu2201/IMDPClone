@@ -1,0 +1,116 @@
+.logcontainer,
+.signcontainer,
+.resetcontainer {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.logcontainer h2,
+.signcontainer h2,
+.resetcontainer h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.logcontainer input,
+.signcontainer input,
+.resetcontainer input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.logcontainer button,
+.signcontainer button,
+.resetcontainer button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logcontainer .link,
+.signcontainer .link,
+.resetcontainer .link {
+  display: block;
+  margin: 15px 0;
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.logcontainer .link:hover,
+.signcontainer .link:hover,
+.resetcontainer .link:hover {
+  text-decoration: underline;
+}
+
+.logcontainer p,
+.signcontainer p,
+.resetcontainer p {
+  color: #ff3333;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.logcontainer .logButton {
+  background-color: #4285f4;
+}
+
+.logcontainer .logButton:hover {
+  background-color: #357ae8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signcontainer .signButton {
+  background-color: #f4b400;
+}
+
+.signcontainer .signButton:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.resetcontainer .resetButton {
+  background-color: #db4437;
+}
+
+.resetcontainer .resetButton:hover {
+  background-color: #c1351a;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.resetcontainer span {
+  display: inline-block;
+  margin: 0 5px;
+  color: #666;
+}
+.logcontainer input:focus,
+.signcontainer input:focus,
+.resetcontainer input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.resetcontainer {
+  padding-bottom: 30px;
+}

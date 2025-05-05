@@ -1,196 +1,187 @@
-/* Dark Theme Styles */
 .movie-details-container.dark-theme {
-    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-    color: #e0e0e0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  .dark-theme .movie-title {
-    color: #ffffff;
-  }
-  
-  .dark-theme .movie-title::after {
-    background: #007cff;
-  }
-  
-  .dark-theme .release-date {
-    color: #b0b0b0;
-  }
-  
-  .dark-theme .genre-tag {
-    background: linear-gradient(135deg, #f39c12, #007cff);
-    color: #fff;
-  }
-  
-  .dark-theme .rating-value {
-    color: #f1c40f;
-  }
-  
-  .dark-theme .stars {
-    color: #f1c40f;
-  }
-  
-  .dark-theme .detail-label {
-    color: #007cff;
-  }
-  
-  .dark-theme .detail-text {
-    color: #d0d0d0;
-    margin-left: 1rem ;
-    text-align: justify;
-    
-    
-  }
-  
-  .dark-theme .about-movie {
-    background: rgba(40, 40, 40, 0.8);
-    border-left: 4px solid #007cff;
-  }
-  
-  .dark-theme .cast-member {
-    background: #2d2d2d;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding-bottom: 1%;
-  }
-  
-  .dark-theme .cast-role {
-    color: #a0a0a0;
-  }
-  
-  /* Base Dark Theme Styles */
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  color: #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .movie-title {
+  color: #ffffff;
+}
+
+.dark-theme .movie-title::after {
+  background: #007cff;
+}
+
+.dark-theme .release-date {
+  color: #b0b0b0;
+}
+
+.dark-theme .genre-tag {
+  background: linear-gradient(135deg, #f39c12, #007cff);
+  color: #fff;
+}
+
+.dark-theme .rating-value {
+  color: #f1c40f;
+}
+
+.dark-theme .stars {
+  color: #f1c40f;
+}
+
+.dark-theme .detail-label {
+  color: #007cff;
+}
+
+.dark-theme .detail-text {
+  color: #d0d0d0;
+  margin-left: 1rem;
+  text-align: justify;
+}
+
+.dark-theme .about-movie {
+  background: rgba(40, 40, 40, 0.8);
+  border-left: 4px solid #007cff;
+}
+
+.dark-theme .cast-member {
+  background: #2d2d2d;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1%;
+}
+
+.dark-theme .cast-role {
+  color: #a0a0a0;
+}
+
+.movie-details-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.movie-details-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #007cff, #f39c12, #007cff);
+}
+
+.poster-container {
+  position: relative;
+  align-self: center;
+}
+
+.poster-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  filter: brightness(0.95);
+}
+
+.poster-image:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.05);
+}
+
+.loading-state {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+}
+
+.loading-dots span {
+  background: #007cff;
+}
+
+.error-message {
+  text-align: center;
+  color: #007cff;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
   .movie-details-container {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    border-radius: 16px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .movie-details-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(90deg, #007cff, #f39c12, #007cff);
-  }
-  
-  .poster-container {
-    position: relative;
-    align-self: center;
-   
-  }
-  
-  .poster-image {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    aspect-ratio: 2/3;
-    object-fit: cover;
-    filter: brightness(0.95);
-  }
-  
-  .poster-image:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
-    filter: brightness(1.05);
-  }
-  
-  /* Rest of your existing CSS remains the same */
-  /* ... */
-  
-  .loading-state {
-    text-align: center;
-    padding: 4rem;
-    font-size: 1.5rem;
-    color: #a0a0a0;
-  }
-  
-  .loading-dots span {
-    background: #007cff;
-  }
-  
-  .error-message {
-    text-align: center;
-    color: #007cff;
-    padding: 2rem;
-    font-size: 1.2rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .movie-details-container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 1.5rem;
-    }
-    
-    .movie-title {
-      font-size: 2.2rem;
-    }
-    
-    .poster-container {
-      max-width: 350px;
-      margin: 0 auto;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .movie-title {
-      font-size: 1.8rem;
-    }
-    
-    .movie-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.8rem;
-    }
-    
-    .cast-grid {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
   }
 
-  .update-btn{
-    margin: 1rem;
-    padding: 0.8rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: linear-gradient(135deg, #00ffe0, #007cff);
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  .movie-title {
+    font-size: 2.2rem;
   }
-  
-  .update-btn{
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px rgba(0, 255, 224, 0.6);
+
+  .poster-container {
+    max-width: 350px;
+    margin: 0 auto;
   }
-  
-  .delete-btn{
-    margin: 1rem;
-    padding: 0.8rem 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: linear-gradient(135deg, #00ffe0, #007cff);
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 576px) {
+  .movie-title {
+    font-size: 1.8rem;
   }
-  
-  .delete-btn{
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px rgba(0, 255, 224, 0.6);
+
+  .movie-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
   }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+.update-btn {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #00ffe0, #007cff);
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.update-btn {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 255, 224, 0.6);
+}
+
+.delete-btn {
+  margin: 1rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #00ffe0, #007cff);
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-btn {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 255, 224, 0.6);
+}
