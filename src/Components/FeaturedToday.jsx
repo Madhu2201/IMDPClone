@@ -83,7 +83,13 @@ const FeaturedToday = ({ movies }) => {
                       day: "numeric",
                     })}
                   </h5>
-                  <h6>Rating: {movie.rating}</h6>
+                  <div className="rating-container">
+          <span className="rating-value" >Ratings: {movie.rating}</span>
+          <div className="stars"  style={{ color: "#f1c40f" }}>
+            {"★".repeat(Math.round(movie.rating / 2))}
+            {"☆".repeat(5 - Math.round(movie.rating / 2))}
+          </div>
+        </div>
                 </div>
               </div>
             </div>

@@ -175,6 +175,7 @@
   margin: 10px 0;
   font-size: 16px;
   line-height: 1.4;
+  max-width: 40vw;
 }
 .featured-movie-content h5,
 h6 {
